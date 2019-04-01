@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //将一个数组中的值从小到大排列
+    //var arr = [65, 97, 76, 13, 27, 49, 58];
+    /*var arr = [20, 30];
+     console.log(arr);
+     if (arr[0] > arr[1]) {
+     var temp = arr[0];
+     arr[0] = arr[1];
+     arr[1] = temp;
+     }
+     console.log(arr);*/
+    var arr = [65, 97, 76, 13, 27, 49, 58];
+    //外层循环控制的是比较的趟数
+    //5个元素比较4趟 arr.length个元素比较arr.length-1趟
+    for (var i = 0; i < arr.length - 1; i++) {//arr.length-1趟
+        //内层循环 控制的是两两比较的次数
+        //5个元素比较4次 arr.length个元素 比较arr.length-1次
+        for (var j = 0; j < arr.length - 1; j++) {//arr.length-1趟
+            if (arr[j] > arr[j + 1]) {
+                var temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    console.log(arr);
+
+</script>
+</body>
+</html>

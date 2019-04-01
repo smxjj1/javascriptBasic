@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        //本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        var money = 10000;
+        var rate = 0.003;
+        /*money = money + money * rate;
+         money = money + money * rate;
+         money = money + money * rate;
+         money = money + money * rate;
+         money = money + money * rate;*/
+
+        /*for (var i = 1; i <= 5; i++) {
+         money = money + money * rate;
+         }
+         console.log(money);*/
+
+
+        //兔子数列规律为：1，1，2，3，5，8，13，21
+        //    var n1 = 1;
+        //    var n2 = 1;
+        //    var n3;
+        //    for (var i = 3; i <= 12; i++) {
+        //        n3 = n1 + n2;
+        //        n1 = n2;
+        //        n2 = n3;
+        //    }
+        //    console.log(n3);
+
+        //兔子数列规律为：1，1，2，3，5，8，13，21
+        var a = 1; //
+        var b = 1; //
+        var n; //3月之后的每一月
+        for (var i = 3; i <= 12; i++) { //i=3  i=4
+            n = a + b; //n=2
+            a = b; //a=1
+            b = n; //b=2
+        }
+        console.log(n);
+
+
+        //迭代的方法
+        //getSum(0) = 1
+        //getSum(1) = 1 ;
+        //getSum(2) = getSum(1)+2;
+        //getSum(3) = getSum(2)+3;
+        var arr = {
+            0: 0,
+            1: 1,
+            2: 1
+        }
+
+        function fibna(n){
+            return n<2?1:(arr[n]=fibna(n-1)+fibna(n-2));
+        };
+        fibna(4)
+    </script>
+</body>
+
+</html>
